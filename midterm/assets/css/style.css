@@ -1,0 +1,82 @@
+html, body {
+    background-color:  rgb(4, 98, 4);
+    font-family: Karla, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+.top-side {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    position: fixed;
+    background-color: white;
+}
+.top {
+    float: right;
+    margin-right: 0px;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    width: 1400px;
+}
+header{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.address {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+#logo {
+    height: 150px;
+    width: 200px;
+    float: left;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+nav a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px 16px;
+    background-color: white;
+}
+a:hover {
+    color: white;
+    background-color: black;
+}
+li {
+    display: inline;
+    float: right;
+    margin-right: 100px ;
+}
+.mid {
+    display: flex;
+    justify-content: center;
+}
+#food{
+    margin-top: 150px;
+    width: 900px;
+    border: 10px solid black;
+}
+h3 {
+    position: absolute;
+    font-size: xx-large;
+    left: 300px;
+    bottom: 5px;
+    padding: 50px 20px;
+    background-color: white;
+}
