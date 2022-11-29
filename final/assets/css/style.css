@@ -1,0 +1,227 @@
+/* Main Page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    background-image: linear-gradient(#404040, #181818);
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 40px;
+    cursor: pointer;
+}
+.Port nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+.Port nav a{
+    text-decoration: none;
+}
+.Port nav ul li a{
+    text-decoration: none;
+    font-size: 40px;
+}
+.Port nav ul li a:hover, .Port h1 a:hover {
+    color: #FDB927;
+    background-color: purple;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.Port nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 15px;
+}
+.intro {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+}
+.intro .about {    
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.intro .about h2{    
+    font-size: 50px;
+    color: #FDB927;
+    margin-bottom: 25px;
+}
+.intro .about h3{    
+    font-size: 20px;
+    margin-left: 20px;
+}
+.intro .about h4{    
+    font-size: 40px;
+    background-color:#FDB927;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.intro nav{    
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 200px;
+}
+#ball {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 20%;
+    width: 100px;
+
+}
+
+#hand {
+    position: absolute;
+    margin-left: 4%;
+    margin-top: 18%;
+    width: 150px;
+}
+
+@keyframes pulse {
+	from {transform: scale(1); opacity: 1;}
+    to {transform: scale(500); opacity: 0;}
+}
+
+h2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+  
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
+}
+
+/* Teams Page*/
+
+.teams {
+    height: 84%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teams img {
+    height: 300px;
+    width: 400px;
+    cursor: pointer;
+}
+
+#cavlebron2, #lakerlebron2, #miamilebron2 {
+    margin-left: 250px;
+}
+
+.teams .cav-team img{
+    height: 300px;
+    width: 400px;
+}
+.unhide {
+    display: block;
+}
+
+/* #cavs:hover, #lakers:hover, #miami:hover {
+    height: 250px;
+    width: 350px;
+}
+*/
+.cav-team, .laker-team, .miami-team{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cav-team, .laker-team, .miami-team{
+    margin-top: 75px;
+    margin-left: 275px;
+    position: absolute;
+}
+
+.M, .C, .L{
+    display: none;
+
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 34%;
+    margin-top: 125px;
+    position: absolute;
+}
+
+.section img {
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+}
+
+
+.section img:hover{
+    height: 150px;
+    width: 200px;
+}
+
+.loader.one {
+    margin-top: 50px;
+    margin-left: 50%;
+	width: 100px;
+	height: 100px;
+    position: absolute;
+}
+
+.loader.one .circle {
+    cursor: pointer;
+	height: 100px;
+	width: 100px;
+	background: #FDB927;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50px;
+	/* TODO: PART 1.2 - Add pulse animation */
+	animation-name: c;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+/* TODO: PART 1.3 - Delay pulse animation for circle two */
+.loader.one .second {
+	animation-name: c;
+	animation-delay: .5s;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+/* TODO: PART 1.1 - Create pulse animation */
+@keyframes c {
+	from {transform: scale(1); opacity: 1;}
+	to {transform: scale(3); opacity: 0;}
+}
