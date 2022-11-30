@@ -3,7 +3,8 @@ let cavs = document.getElementById("C1");
 let lakers = document.getElementById("L1");
 let miami = document.getElementById("M1");
 let divTeam = document.querySelector("teams");
-
+let champion = document.getElementById("Win");
+let cry = document.getElementById("cry");
 
  
 function display(input) {
@@ -18,6 +19,7 @@ function display(input) {
 
 function hide(current) {
     list = ["C", "L", "M"];
+    champion.style.display = "none";
     for (i=0; i< list.length; i++) {
         if (list[i] !== current) {
             let div = document.getElementsByClassName(list[i]);
@@ -27,6 +29,10 @@ function hide(current) {
             }
         }
     }
+}
+cry.onclick = function() {
+    hide("G")
+    champion.style.display = "block";
 }
 
 cavs.onclick = function() { 
@@ -39,6 +45,17 @@ cavs.onclick = function() {
 
 }
 
+cavs.onmouseover = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "none";
+    body.style.backgroundColor = "#860038";
+}
+
+cavs.onmouseout = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "linear-gradient(#404040, #181818)";
+}
+
 lakers.onclick = function() {
     let photos = document.getElementsByClassName("L");
     hide("L")
@@ -48,6 +65,17 @@ lakers.onclick = function() {
     }
 }
 
+lakers.onmouseover = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "none";
+    body.style.backgroundColor = "#FDB927";
+}
+
+lakers.onmouseout = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "linear-gradient(#404040, #181818)";
+}
+
 miami.onclick = function() {
     let photos = document.getElementsByClassName("M");
     hide("M")
@@ -55,4 +83,15 @@ miami.onclick = function() {
         let dis = document.getElementById(photos[i].id)
         dis.style.display = "block";
     }
+}
+
+miami.onmouseover = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "none";
+    body.style.backgroundColor = "#98002E";
+}
+
+miami.onmouseout = function() {
+    let body = document.querySelector("body");
+    body.style.backgroundImage = "linear-gradient(#404040, #181818)";
 }
